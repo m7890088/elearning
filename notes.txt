@@ -1,0 +1,7 @@
+finish login page
+
+redirect according to role
+
+write the models 
+
+payment page and method

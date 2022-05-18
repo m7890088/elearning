@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% load static %}
+{% load compress %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SaveTheMeal - Kindergarten Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static "img/favicon.ico" %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static "lib/flaticon/font/flaticon.css" %}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static "lib/owlcarousel/assets/owl.carousel.min.css" %}" rel="stylesheet">
+    <link href="{% static "lib/lightbox/css/lightbox.min.css" %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.min.css" %}" rel="stylesheet">
+    {% compress css %}
+    <link type="text/x-scss" href="{% static 'scss/bootstrap/scss/bootstrap-grid.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="{% url "index" %}" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-043-teddy-bear" style="font-size:50px;"></i>
+                <span class="text-primary">SaveTheMeal</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    <a href="{% url "index" %}" class="nav-item nav-link active">Home</a>
+                    <a href="#scrollabout" class="nav-item nav-link">About</a>
+                    <a href="#scrollclasses" class="nav-item nav-link" hidden>Classes</a>
+                    <a href="#scrollteacher" class="nav-item nav-link" hidden>Teachers</a>
+                    <a href="{% url "kindergarten:login" %}" class="nav-item nav-link">Login</a>
+                  <!--  <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="" class="dropdown-item">Blog Grid</a>
+                            <a href="" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div> -->
+                    <a href="#scrollcontact" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="{% url "kindergarten:classes" %}" class="btn btn-primary px-4" hidden>Join Class</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">Save the meal</h4>
+                <h1 class="display-3 font-weight-bold text-white">What is our app about?</h1>
+                <p class="text-white mb-4">Save the Meal is a cell phone application that helps the	customers connect to the people in need and victims ofpoverty. Our app contains two functions, the first one is where
+
+                  you can sell food supplies  for lower prices to help them manage	financially, and the second one is where you can donate
+
+                  supplies to them. The application is also connected to an organization
+
+                  where it hands out food twice a week in each branch in every	city in Jordan.
+
+</p>
+                <a href="#scrollfacilities" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img class="img-fluid mt-5" src="{% static "img/header.jpg" %}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Facilities Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pb-3">
+            <div class="row">
+                <div id='scrollfacilities' class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Dinners organized with the help of an organization
+
+</h4>
+                            <p class="m-0">To try and help everybody as much as we could . We will connect with anorganization  to help us give food to people who are unable to reach us
+
+                              throughout our app.
+
+                              From 2-3 times a week the organization will take pre-prepared food from
+
+                              the app through us and give to the people unable to reach us.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>The dinners organized by individual
+
+</h4>
+                            <p class="m-0">We take leftover food from dinners andparties organized by individuals and
+
+                              check the food quality for it to be
+
+                              packed and sent to people in need.
+                              The packages should be sanitized.
+                              The packages should be sorted according to the type of food
+                              The food should be edible
+                              The packages should be dated
+
+
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>The Food Bank</h4>
+                            <p class="m-0">People who have extra food can upload their items, for free or for a lower price into a basket. They may use their laptops, computers, and cell phones after providing their information.
+Each user is allowed to order only two meals per person everyday.
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Food Sold Lower Than the Market Price
+
+</h4>
+                            <p class="m-0">- Some may purchase extra food that will be stored for a few days and will be thrown	away eventually.
+
+                              - "Save the meal " will prevent this from happening.  People can sell the foodfor a lower price in order to  support the people who are in need . Both sides	will benefit.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>THE FOOD THAT IS LISTED FOR FREE
+
+</h4>
+                            <p class="m-0">Of course, in Save the Meal there is a whole section for free food
+
+                              dedicated to people who cannot afford it so as to help them get good food quality
+
+                              for their daily need.
+
+                              People can donate extra food  by uploading it to the app.
+
+                              In that way the food will not expire and not go to waste . the people who
+
+                              get the donation will have good food quality food to eat.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities Start -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div  id="scrollabout" class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                  <p class="section-title pr-5"><span class="pr-2">Learn About Us</span></p>
+                  <h1 class="mb-4">Summary</h1>
+                  <p>In summary, our app will prevent a large amount of food fromgoing to waste. Instead it will give this extra food to the less
+
+                    fortunate, who may not have enough to eat. Also, with the
+
+                    help of an organization whom is willing to fund our app, we	will be able to turn our idea into
+
+                    reality. In addition to that, Food will be listed on the app for
+
+                    cheap prices or even for free to help with peoples
+
+                    unfortunate circumstances. Finally, if our dreams come into
+
+                    fruition, we may be able to make a better world for thousands
+
+                    of people.</p>
+
+                </div>
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static "lib/easing/easing.min.js" %}"></script>
+    <script src="{% static "lib/owlcarousel/owl.carousel.min.js" %}"></script>
+    <script src="{% static "lib/isotope/isotope.pkgd.min.js" %}"></script>
+    <script src="{% static "lib/lightbox/js/lightbox.min.js" %}"></script>
+
+
+
+    <!-- Template Javascript -->
+    <script src="{% static "js/main.js" %}"></script>
+
+
+</body>
+
+</html>
